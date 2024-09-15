@@ -4,11 +4,12 @@ import './style.css';
 
 export function App() {
 	return (
-		<div className="min-h-screen bg-white">
+		<div className="min-h-screen bg-[url('https://picsum.photos/seed/shpe/700/400.webp')] bg-cover bg-fixed bg-center relative">
+			<div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-[#FDB913] to-[#F26522] opacity-70"></div>
 			<div className="hero bg-gradient-to-r from-[#003087] to-[#00A0DF] text-white relative">
-				<div className="hero-overlay bg-[url('https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp')] opacity-20 bg-cover bg-center"></div>
+				<div className="hero-overlay bg-[url('https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp')] opacity-20 bg-cover bg-center bg-fixed"></div>
 				<div className="hero-content text-center">
-					<div className="max-w-3xl py-6">
+					<div className="max-w-3xl py-8">
 						<h1 className="mb-2 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#FDB913]">Welcome to</h1>
 						<h1 className="mb-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#F26522]">Noche de Industria</h1>
 						<p className="text-base md:text-lg">
@@ -18,7 +19,7 @@ export function App() {
 				</div>
 			</div>
 
-			<div className="container mx-auto py-8 md:py-10 px-4">
+			<div className="container mx-auto py-8 md:py-9 px-4 relative">
 				<h1 className="text-3xl lg:text-4xl font-bold text-center text-[#003087] pb-8 md:pb-10">
 					Participating Companies
 				</h1>
@@ -46,7 +47,8 @@ export function App() {
 				</div>
 			</div>
 
-			<footer className="bg-[#003087] text-white py-5">
+
+			<footer className="bg-[#003087] text-white py-5 relative">
 				<div className="container mx-auto text-center">
 					<p>&copy; 2024 SHPE at University of South Florida. All rights reserved.</p>
 				</div>
