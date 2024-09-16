@@ -17,7 +17,7 @@ export function App() {
 			<div className="hero bg-gradient-to-r from-[#003087] to-[#00A0DF] text-white relative min-h-screen overflow-hidden">
 				{isIOSSafari
 					? (<Parallax className="w-full h-full opacity-20 bg-cover bg-center" background="https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp" />)
-					: (<div className="hero-overlay bg-cover bg-center bg-fixed" style={{ backgroundImage: `url('https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp')` }} />)
+					: (<div className="hero-overlay bg-cover bg-center bg-fixed opacity-20" style={{ backgroundImage: `url('https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp')` }} />)
 				}
 				<div className="hero-content text-center">
 					<div className="max-w-3xl py-12">
@@ -27,6 +27,7 @@ export function App() {
 						</h1>
 						<p className="text-base sm:text-2xl uppercase font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#FDB913] to-[#F26522]">
 							Turn your passion into profession
+							{isIOSSafari ? 'IOS' : 'not ios'}
 						</p>
 						<p className="text-base md:text-xl text-white font-light max-w-2xl mx-auto mt-2 leading-relaxed">
 							Kickstart your career with <span className="font-semibold text-[#FDB913]">amazing companies</span> and <span className="font-semibold text-[#FDB913]">industry leaders</span>
