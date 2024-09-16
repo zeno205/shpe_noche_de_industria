@@ -9,7 +9,7 @@ export function App() {
 			{/* Hero Section */}
 			<div className="hero text-white relative min-h-screen">
 				<div className="hero-overlay bg-gradient-to-r from-[#003087] to-[#00A0DF] opacity-70"></div>
-				<div className="hero-overlay bg-cover bg-center fixed -z-10" style={{ backgroundImage: `url('https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp')` }} ></div>
+				<div className="hero-overlay bg-center w-screen h-screen fixed -z-10" style={{ backgroundImage: `url('https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp')` }} ></div>
 				<div className="hero-content text-center">
 					<div className="max-w-3xl py-12">
 						<h1 className="mb-2 text-3xl sm:text-4xl lg:text-6xl font-bold text-[#FDB913] drop-shadow-lg">Welcome to</h1>
