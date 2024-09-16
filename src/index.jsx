@@ -4,10 +4,15 @@ import Parallax from './components/Parallax.jsx';
 import './style.css';
 
 export function App() {
-	const isIOSSafari = typeof window !== 'undefined' && // Check if window exists (during client-side rendering)
-		window.navigator.userAgent.match(/iPad|iPhone/i) &&
-		window.navigator.userAgent.match(/WebKit/i) &&
-		!window.navigator.userAgent.match(/CriOS/i);
+	const userAgentString = typeof window !== 'undefined' ? navigator.userAgent: ''; 
+	let chromeAgent = userAgentString.indexOf("Chrome") > -1; 
+	// Detect Safari 
+	let isIOSSafari =
+		userAgentString.indexOf("Safari") > -1;
+
+	// Discard Safari since it also matches Chrome 
+	if ((chromeAgent) && (isIOSSafari))
+		isIOSSafari = false; 
 	return (
 		<div className="min-h-screen relative">
 			<div className="absolute inset-0 bg-[url('https://picsum.photos/seed/something/700/400.webp')] bg-cover bg-fixed bg-center"></div>
