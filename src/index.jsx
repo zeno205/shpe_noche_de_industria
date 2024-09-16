@@ -1,5 +1,5 @@
 import { hydrate, prerender as ssr } from 'preact-iso';
-import Parallax from './components/Parallax';
+import Parallax from './components/Parallax.jsx';
 
 import './style.css';
 

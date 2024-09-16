@@ -1,3 +1,4 @@
+// Custom Parallax emulator for iOS
 import { useState, useEffect } from 'react';
 const Parallax = ({ className = '', background }) => {
     const [scrollY, setScrollY] = useState(0);
