@@ -32,7 +32,7 @@ export function App() {
 				</div>
 			</div>
 
-			<div className="container mx-auto py-16 px-4 bg-white relative">
+			<div className="mx-auto py-16 px-4 bg-white relative">
 				<h1 className="text-4xl lg:text-5xl font-bold text-center text-[#003087] pb-12 drop-shadow-md">
 					Participating Companies
 				</h1>
@@ -62,7 +62,7 @@ export function App() {
 
 
 			<footer className="bg-[#003087] text-white py-5 relative">
-				<div className="container mx-auto text-center">
+				<div className="container mx-auto text-center text-xs sm:text-sm">
 					<p>&copy; 2024 SHPE at University of South Florida. All rights reserved.</p>
 				</div>
 			</footer>
