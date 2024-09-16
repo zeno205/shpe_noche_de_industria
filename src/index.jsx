@@ -1,5 +1,5 @@
 import { hydrate, prerender as ssr } from 'preact-iso';
-// import Parallax from './components/Parallax.jsx';
+import companies from './data/companies';
 
 import './style.css';
 
@@ -37,20 +37,16 @@ export function App() {
 					Participating Companies
 				</h1>
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-					{[1, 2, 3].map((item) => (
-						<div key={item} className="card bg-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-							<figure className="px-10 pt-10 pb-6 bg-gradient-to-br from-[#003087] to-[#00A0DF]">
-								<div className="avatar placeholder">
-									<div className="bg-white text-[#003087] rounded-full w-24 h-24">
-										<span className="text-4xl font-bold">{item}</span>
-									</div>
-								</div>
+					{companies.map((item) => (
+						<div key={item.name} className="card bg-white text-[#003087] drop-shadow-md shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+							<figure className="bg-gradient-to-r from-[#003087] to-[#00A0DF] h-48 p-4">
+								<img src={item.logo_path} style={{ width: "90%", maxHeight: "60%", height: "auto", filter: "brightness(0) invert(1)" }} />
 							</figure>
 							<div className="card-body items-center text-center p-6">
-								<h2 className="card-title text-2xl font-bold text-[#003087]">Company {item}</h2>
-								<p className="text-gray-600 mb-4">Leading innovator in engineering and technology solutions.</p>
+								<h2 className="card-title text-2xl font-bold text-[#003087]">{item.name}</h2>
+								<p className="mb-4 text-[#003087]">{item.description}</p>
 								<div className="card-actions w-full">
-									<button className="btn bg-[#00A0DF] hover:bg-[#0082B3] text-white w-full border-none transition-colors duration-300">
+									<button className="btn bg-[#F26522] hover:bg-[#FDB913] text-white w-full border-none transition-colors duration-300">
 										Learn More
 									</button>
 								</div>
