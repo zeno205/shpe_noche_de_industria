@@ -38,7 +38,7 @@ export function App() {
 						</p>
 					</div>
 				</div>
-				<div className="absolute bottom-3 text-center animate-bounce">
+				<div className="absolute bottom-8 text-center animate-bounce">
 					<p className="text-white text-sm mb-1">See Companies</p>
 					<svg className="w-6 h-6 mx-auto text-white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
 						<path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
