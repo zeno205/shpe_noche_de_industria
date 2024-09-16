@@ -32,7 +32,7 @@ export function App() {
 				</div>
 			</div>
 
-			<div className="py-16 px-4 bg-white">
+			<div className="py-12 px-4 bg-white">
 				<h1 className="text-4xl lg:text-5xl font-bold text-center text-[#003087] pb-12 drop-shadow-md">
 					Participating Companies
 				</h1>
@@ -61,12 +61,12 @@ export function App() {
 			</div>
 
 
-			<footer className="bg-[#003087] text-white py-5">
+			<footer className="bg-[#003087] text-white py-5 relative overflow-clip">
 				<div className="container mx-auto text-center text-xs sm:text-sm">
 					<p>&copy; 2024 SHPE at University of South Florida. All rights reserved.</p>
 				</div>
 				{/* padding at bottom of the page to mitigate bouncing scroll on Safari */}
-				<div className="bg-[#003087] w-full h-6 -mb-6"></div>
+				<div className="bg-[#003087] absolute w-full h-10 -bottom-10"></div>
 			</footer>
 		</div>
 	);
