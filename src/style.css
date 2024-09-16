@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .parallax-bg {
+        transform: translateY(var(--scroll-y));
+        will-change: transform;
+    }
+}

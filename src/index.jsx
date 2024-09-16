@@ -1,29 +1,27 @@
 import { hydrate, prerender as ssr } from 'preact-iso';
-import Parallax from './components/Parallax.jsx';
+import { useEffect } from 'react';
+// import Parallax from './components/Parallax.jsx';
 
 import './style.css';
 
 export function App() {
-	const userAgentString = typeof window !== 'undefined' ? navigator.userAgent: ''; 
-	let chromeAgent = userAgentString.indexOf("Chrome") > -1; 
-	// Detect Safari 
-	let isIOSSafari =
-		userAgentString.indexOf("Safari") > -1;
+	useEffect(() => {
+		const handleScroll = () => {
+			const scrollY = window.scrollY;
+			document.documentElement.style.setProperty('--scroll-y', `${scrollY * 0.5}px`);
+		};
 
-	// Discard Safari since it also matches Chrome 
-	if ((chromeAgent) && (isIOSSafari))
-		isIOSSafari = false; 
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
 	return (
-		<div className="min-h-screen relative">
-			<div className="absolute inset-0 bg-[url('https://picsum.photos/seed/something/700/400.webp')] bg-cover bg-fixed bg-center"></div>
+		<div className="min-h-screen relative overflow-hidden">
+			<div className="fixed inset-0 bg-[url('https://picsum.photos/seed/something/700/400.webp')] bg-cover bg-center transform scale-110 origin-top parallax-bg"></div>
 			<div className="absolute inset-0 bg-gradient-to-t from-[#FDB913] to-[#F26522] opacity-60"></div>
 
 			{/* Hero Section */}
-			<div className="hero bg-gradient-to-r from-[#003087] to-[#00A0DF] text-white relative min-h-screen overflow-hidden">
-				{isIOSSafari
-					? (<Parallax className="w-full h-full opacity-20 bg-cover bg-center" background="https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp" />)
-					: (<div className="hero-overlay bg-cover bg-center bg-fixed opacity-20" style={{ backgroundImage: `url('https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp')` }} />)
-				}
+			<div className="hero bg-gradient-to-r from-[#003087] to-[#00A0DF] text-white relative min-h-screen">
+				<div className="hero-overlay bg-cover bg-center bg-fixed opacity-20" style={{ backgroundImage: `url('https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp')` }}></div>
 				<div className="hero-content text-center">
 					<div className="max-w-3xl py-12">
 						<h1 className="mb-2 text-3xl sm:text-4xl lg:text-6xl font-bold text-[#FDB913] drop-shadow-lg">Welcome to</h1>
@@ -46,7 +44,7 @@ export function App() {
 				</div>
 			</div>
 
-			<div className="container mx-auto py-16 px-4 relative">
+			<div className="container mx-auto py-16 px-4 relative bg-white">
 				<h1 className="text-4xl lg:text-5xl font-bold text-center text-[#003087] pb-12 drop-shadow-md">
 					Participating Companies
 				</h1>
@@ -73,7 +71,7 @@ export function App() {
 					))}
 				</div>
 			</div>
-
+			
 
 			<footer className="bg-[#003087] text-white py-5 relative">
 				<div className="container mx-auto text-center">
