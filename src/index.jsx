@@ -61,12 +61,10 @@ export function App() {
 			</div>
 
 
-			<footer className="bg-[#003087] text-white py-5 relative overflow-clip">
+			<footer className="bg-[#003087] text-white py-5">
 				<div className="container mx-auto text-center text-xs sm:text-sm">
 					<p>&copy; 2024 SHPE at University of South Florida. All rights reserved.</p>
 				</div>
-				{/* padding at bottom of the page to mitigate bouncing scroll on Safari */}
-				<div className="bg-[#003087] absolute w-full h-10 -bottom-10"></div>
 			</footer>
 		</div>
 	);
