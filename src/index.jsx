@@ -5,7 +5,7 @@ import './style.css';
 
 export function App() {
 	return (
-		<div className="min-h-screen relative">
+		<div id="page" className="min-h-screen relative">
 			{/* Hero Section */}
 			<div className="hero text-white relative min-h-screen">
 				<div className="hero-overlay bg-gradient-to-r from-[#003087] to-[#00A0DF] opacity-70"></div>
