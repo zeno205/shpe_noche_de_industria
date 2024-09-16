@@ -9,7 +9,7 @@ export function App() {
 			{/* Hero Section */}
 			<div className="hero text-white relative min-h-screen">
 				<div className="hero-overlay bg-gradient-to-r from-[#003087] to-[#00A0DF] opacity-70"></div>
-				<div className="hero-overlay bg-center w-screen h-screen fixed -z-10" style={{ backgroundImage: `url('https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp')` }} ></div>
+				<div className="hero-overlay bg-center w-screen h-screen bg-cover fixed bg-no-repeat -z-10" style={{ backgroundImage: `url('https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp')` }} ></div>
 				<div className="hero-content text-center">
 					<div className="max-w-3xl py-12">
 						<h1 className="mb-2 text-3xl sm:text-4xl lg:text-6xl font-bold text-[#FDB913] drop-shadow-lg">Welcome to</h1>
@@ -25,7 +25,7 @@ export function App() {
 					</div>
 				</div>
 				<div className="absolute bottom-8 text-center animate-bounce">
-					<p className="text-white text-sm mb-1">See Companies</p>
+					<p className="text-white text-xs font-semibold mb-1 uppercase">Scroll down to see our partners</p>
 					<svg className="w-6 h-6 mx-auto text-white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
 						<path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
 					</svg>
