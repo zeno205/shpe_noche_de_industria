@@ -32,7 +32,6 @@ export function App() {
 						</h1>
 						<p className="text-base sm:text-2xl uppercase font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#FDB913] to-[#F26522]">
 							Turn your passion into profession
-							{isIOSSafari ? 'IOS' : 'not ios'}
 						</p>
 						<p className="text-base md:text-xl text-white font-light max-w-2xl mx-auto mt-2 leading-relaxed">
 							Kickstart your career with <span className="font-semibold text-[#FDB913]">amazing companies</span> and <span className="font-semibold text-[#FDB913]">industry leaders</span>
