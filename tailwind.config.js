@@ -17,6 +17,7 @@ export default {
         '.ripple': {
           backgroundPosition: "center",
           transition: "background 0.8s",
+          backfaceVisibility: "hidden",
         },
       });
       matchUtilities(
@@ -25,6 +26,7 @@ export default {
           'ripple-hover': (value) => {
             return {
               background: `${value} radial-gradient(circle, transparent 1%, ${value} 1%) center/15000%`,
+              willChange: "background-color",
             }
           },
           'ripple-active': (value) => {
@@ -32,6 +34,7 @@ export default {
               backgroundColor: `${value}`,
               backgroundSize: "100%",
               transition: "background 0s",
+              willChange: "background-color, transform",
             }
           },
         },
