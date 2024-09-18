@@ -46,7 +46,7 @@ export function App() {
 								<h2 className="card-title text-2xl font-bold text-[#003087]">{item.name}</h2>
 								<p className="mb-4 text-[#003087]">{item.description}</p>
 								<div className="card-actions w-full">
-									<button className="btn bg-[#F26522] hover:bg-[#FDB913] text-white w-full border-none transition-colors duration-300">
+									<button className="btn border-none w-full bg-[#F26522] text-white ripple hover:ripple-hover-[#FDB913] active:ripple-active-[#FFD262]">
 										Learn More
 									</button>
 								</div>
