@@ -13,7 +13,7 @@ export function App() {
 				<div className="hero-content text-center">
 					<div className="max-w-3xl py-12">
 						<h1 className="mb-2 text-3xl sm:text-4xl lg:text-6xl font-bold text-[#FDB913] drop-shadow-lg">Welcome to</h1>
-						<h1 className="hoverable mb-6 text-4xl sm:text-5xl lg:text-7xl font-extrabold text-[#F26522] drop-shadow-xl transition-all duration-300 hover:scale-105">
+						<h1 className="hoverable mb-6 text-4xl sm:text-5xl lg:text-7xl font-extrabold text-[#F26522] drop-shadow-xl transition-transform duration-300 hover:scale-105">
 							Noche de Industria
 						</h1>
 						<p className="text-base sm:text-2xl uppercase font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#FDB913] to-[#F26522]">
@@ -38,7 +38,7 @@ export function App() {
 				</h1>
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 					{companies.map((item) => (
-						<div key={item.name} className="card hoverable bg-white text-[#003087] drop-shadow-md shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+						<div key={item.name} className="card hoverable bg-white text-[#003087] drop-shadow-md shadow-xl hover:shadow-2xl transition-[transform,shadow] duration-300 hover:-translate-y-2">
 							<figure className="bg-gradient-to-r from-[#003087] to-[#00A0DF] h-48 p-4">
 								<img src={item.logo_path} style={{ width: "90%", maxHeight: "60%", height: "auto", filter: "brightness(0) invert(1)" }} />
 							</figure>
