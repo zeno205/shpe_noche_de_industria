@@ -2,7 +2,7 @@
 function handleHoverEffect(event) {
     const target = event.target.closest('.hoverable'); // Find closest hoverable ancestor
 
-    if (target && !target.dataset.hoverHandled) {
+    if (target) {
         let hoverClasses = [];
 
         // Get or set hover classes
@@ -22,8 +22,6 @@ function handleHoverEffect(event) {
                 hoverClasses.forEach(cls => target.classList.remove(cls));
             }, 600);
         }
-
-        target.dataset.hoverHandled = 'true'; // Mark as handled
     }
 }
 
