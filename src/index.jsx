@@ -1,15 +1,28 @@
 import { hydrate, prerender as ssr } from 'preact-iso';
+import { useState } from 'react';
 import companies from './data/companies';
+import Modal from './components/Modal';
 
 import './style.css';
 
 export function App() {
+	const [isModalOpen, setModalOpen] = useState(false);
+
+	const openModal = () => {
+		setModalOpen(true);
+	};
+
+	const closeModal = () => {
+		setModalOpen(false);
+	};
+
 	return (
-		<div className="min-h-screen relative">
+		<div className={`h-screen fixed overflow-auto ${isModalOpen ? 'lock-scroll' : ''}`}>
+			<div className="bg-center w-full h-full bg-cover fixed bg-no-repeat -z-10" style={{ backgroundImage: `url('https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp')` }} >
+				<div className="w-full h-full fixed bg-gradient-to-r from-[#003087] to-[#00A0DF] opacity-70"></div>
+			</div>
 			{/* Hero Section */}
 			<div className="hero text-white relative min-h-screen">
-				<div className="hero-overlay bg-gradient-to-r from-[#003087] to-[#00A0DF] opacity-70"></div>
-				<div className="hero-overlay bg-center w-screen h-screen bg-cover fixed bg-no-repeat -z-10" style={{ backgroundImage: `url('https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp')` }} ></div>
 				<div className="hero-content text-center">
 					<div className="max-w-3xl py-12">
 						<h1 className="mb-2 text-3xl sm:text-4xl lg:text-6xl font-bold text-[#FDB913] drop-shadow-lg">Welcome to</h1>
@@ -32,7 +45,7 @@ export function App() {
 				</div>
 			</div>
 
-			<div className="py-12 px-4 bg-white">
+			<div className="py-12 px-4 bg-white relative w-screen">
 				<h1 className="text-4xl lg:text-5xl font-bold text-center text-[#003087] pb-12 drop-shadow-md">
 					Participating Companies
 				</h1>
@@ -46,7 +59,7 @@ export function App() {
 								<h2 className="card-title text-2xl font-bold text-[#003087]">{item.name}</h2>
 								<p className="mb-4 text-[#003087]">{item.description}</p>
 								<div className="card-actions w-full">
-									<button className="btn hoverable border-none w-full bg-[#F26522] text-white ripple hover:ripple-hover-[#FDB913] active:ripple-active-[#FFD262]">
+									<button onClick={openModal} className="btn hoverable border-none w-full bg-[#F26522] text-white ripple hover:ripple-hover-[#FDB913] active:ripple-active-[#FFD262]">
 										Learn More
 									</button>
 								</div>
@@ -56,6 +69,7 @@ export function App() {
 				</div>
 			</div>
 
+			<Modal isOpen={isModalOpen} onClose={closeModal}/>
 
 			<footer className="bg-[#003087] text-white py-5">
 				<div className="container mx-auto text-center text-xs sm:text-sm">
