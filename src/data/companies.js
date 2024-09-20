@@ -4,7 +4,7 @@ import atkinsrealis_logo from "../assets/atkinsrealis_logo.svg"
 import bny_mellon_logo from "../assets/bny_mellon_logo.svg"
 export default [
     {
-        name: "BNY Mellon",
+        name: "BNY",
         logo_path: bny_mellon_logo,
         description: "A global investment and wealth management firm offering personalized investment strategies, wealth planning, and risk management services"
     },
