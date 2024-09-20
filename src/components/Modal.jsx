@@ -32,7 +32,7 @@ const Modal = ({ onClose, isOpen }) => {
                                     <li>Product Managers</li>
                                 </ul>
                                 <div className="mt-6">
-                                    <button className="btn bg-[#F26522] text-white hover:bg-[#FDB913] border-none w-full">
+                                    <button className="hoverable btn bg-[#F26522] text-white hover:bg-[#FDB913] border-none w-full">
                                         Apply Now
                                     </button>
                                 </div>
