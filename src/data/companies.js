@@ -192,7 +192,7 @@ const companies = [
   {
     name: "Whiting-Turner",
     logo_path: wt_logo,
-    shortDescription: "A leading construction management and general contracting firm providing a wide range of services, including design-build and integrated project delivery, for diverse projects across the United States",
+    shortDescription: "A leading construction management and general contracting firm that offers a wide range of services, including design services and comprehensive project management, for diverse projects across the United States.",
     company_full_info: {
       description: "The Whiting-Turner Contracting Company is one of the largest employee-owned general contractors and Construction Management companies in the United States. Whiting-Turner is headquartered in Baltimore, Maryland, and has over 50 locations nationwide",
       targetMajors: [
