@@ -149,7 +149,7 @@ const companies = [
   {
     name: "Skanska",
     logo_path: skanska_logo,
-    shortDescription: "A global construction and development company offering internships and full-time positions across the U.S., with opportunities in heavy civil infrastructure, field engineering, project management, and design roles. They focus heavily on large construction projects such as transportation, water, and commercial developments.",
+    shortDescription: "A construction company specializing in civil infrastructure, engineering, and project management for large transportation and commercial projects in the U.S",
     company_full_info: {
       description: "Skanska is a global construction and development company offering internships and full-time positions across the U.S., with opportunities in heavy civil infrastructure, field engineering, project management, and design roles. They focus heavily on large construction projects such as transportation, water, and commercial developments.",
       targetMajors: [
@@ -163,7 +163,9 @@ const companies = [
           "Seattle, WA",
           "Nashville, TN",
           "California (Multiple Locations)",
-          "Texas (Multiple Locations)"
+          "Texas (Multiple Locations)",
+          "Tampa, Florida",
+          "Multiple other US locations"
         ],
         international: []
       },
@@ -180,7 +182,7 @@ const companies = [
       careerPages: [
         {
           name: "Skanska US Careers",
-          url: "https://www.skanska.com/us/careers"
+          url: "https://careers.usa.skanska.com/early-career-and-intern"
         }
       ],
       additionalInfo: "Some possible internship roles are Project Engineer Intern, Steel Bridge Intern, and Heavy Civil Infrastructure Intern",
@@ -190,7 +192,7 @@ const companies = [
   {
     name: "Whiting-Turner",
     logo_path: wt_logo,
-    shortDescription: "A global financial services company delivering comprehensive banking, investment, and advisory solutions to fuel economic growth and empower clients.",
+    shortDescription: "A leading construction management and general contracting firm providing a wide range of services, including design-build and integrated project delivery, for diverse projects across the United States",
     company_full_info: {
       description: "The Whiting-Turner Contracting Company is one of the largest employee-owned general contractors and Construction Management companies in the United States. Whiting-Turner is headquartered in Baltimore, Maryland, and has over 50 locations nationwide",
       targetMajors: [
@@ -234,7 +236,7 @@ const companies = [
   {
     name: "HDR",
     logo_path: hdr_logo,
-    shortDescription: "A global engineering and architecture firm offering many opportunities for students and recent graduates in various technical and design-related fields to get hands-on experience in real-world projects across multiple industries.",
+    shortDescription: "An employee-owned firm specializing in architecture, engineering, and environmental services. HDR delivers sustainable solutions that enhance communities and global quality of life",
     company_full_info: {
       description: "As a global engineering and architecture firm, HDR offers many opportunities for students and recent graduates in various technical and design-related fields to get hands-on experience in real-world projects across multiple industries.",
       targetMajors: [
@@ -261,7 +263,7 @@ const companies = [
           url: "https://hdr.taleo.net/careersection/ex/jobsearch.ftl"
         }
       ],
-      additionalInfo: "HDR offers opportunities to work on innovative projects in architecture, engineering, and environmental consulting",
+      additionalInfo: "",
       careerLink: "https://www.hdrinc.com/careers"
     }
   }
