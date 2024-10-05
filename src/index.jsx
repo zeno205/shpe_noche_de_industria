@@ -2,13 +2,16 @@ import { hydrate, prerender as ssr } from 'preact-iso';
 import { useState } from 'react';
 import companies from './data/companies';
 import Modal from './components/Modal';
+import bg from './assets/bg.webp'
 
 import './style.css';
 
 export function App() {
 	const [isModalOpen, setModalOpen] = useState(false);
+	const [selectedCompany, setSelectedCompany] = useState();
 
-	const openModal = () => {
+	const openModal = (company) => {
+		setSelectedCompany(company)
 		setModalOpen(true);
 	};
 
@@ -18,7 +21,7 @@ export function App() {
 
 	return (
 		<div className={`h-screen fixed overflow-auto ${isModalOpen ? 'lock-scroll' : ''}`}>
-			<div className="bg-center w-full h-full bg-cover fixed bg-no-repeat -z-10" style={{ backgroundImage: `url('https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp')` }} >
+			<div className="bg-center w-full h-full bg-cover fixed bg-no-repeat -z-10" style={{ backgroundImage: `url('${bg}')` }} >
 				<div className="w-full h-full fixed bg-gradient-to-r from-[#003087] to-[#00A0DF] opacity-70"></div>
 			</div>
 			{/* Hero Section */}
@@ -52,14 +55,23 @@ export function App() {
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 					{companies.map((item) => (
 						<div key={item.name} className="card hoverable bg-white text-[#003087] drop-shadow-md shadow-xl hover:shadow-2xl transition-[transform,shadow] duration-300 hover:-translate-y-2">
-							<figure className="bg-gradient-to-r from-[#003087] to-[#00A0DF] h-48 p-4">
-								<img src={item.logo_path} style={{ width: "90%", maxHeight: "60%", height: "auto", filter: "brightness(0) invert(1)" }} />
+							<figure className="bg-gradient-to-r from-[#003087] to-[#00A0DF] h-48 p-4 flex items-center justify-center">
+								<div className="bg-white rounded-lg p-3 flex items-center justify-center w-4/5 h-4/5">
+									<img
+										src={item.logo_path}
+										alt={`${item.name} logo`}
+										style={{ height: "70%", maxWidth: "90%"}}
+									/>
+								</div>
 							</figure>
 							<div className="card-body items-center text-center p-6">
 								<h2 className="card-title text-2xl font-bold text-[#003087]">{item.name}</h2>
-								<p className="mb-4 text-[#003087]">{item.description}</p>
+								<p className="mb-4 text-[#003087]">{item.shortDescription}</p>
 								<div className="card-actions w-full">
-									<button onClick={openModal} className="btn hoverable border-none w-full bg-[#F26522] text-white ripple hover:ripple-hover-[#FDB913] active:ripple-active-[#FFD262]">
+									<button
+										onClick={() => openModal(item)}
+										className="btn hoverable border-none w-full bg-[#F26522] text-white ripple hover:ripple-hover-[#FDB913] active:ripple-active-[#FFD262]"
+									>
 										Learn More
 									</button>
 								</div>
@@ -69,7 +81,7 @@ export function App() {
 				</div>
 			</div>
 
-			<Modal isOpen={isModalOpen} onClose={closeModal}/>
+			{isModalOpen == true && <Modal onClose={closeModal} item={selectedCompany} />}
 
 			<footer className="bg-[#003087] text-white py-5">
 				<div className="container mx-auto text-center text-xs sm:text-sm">
